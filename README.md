@@ -7,33 +7,37 @@
 [![license](https://img.shields.io/npm/l/tonal.chord.svg)](https://www.npmjs.com/package/tonal.chord)
 [![tonal](https://img.shields.io/badge/lib-tonal-yellow.svg)](https://www.npmjs.com/package/tonal)
 
-
-`tonal.chord` is a collection of functions to create and manipulate chords and a [chord dictionary]()
+Music chords made easy:
 
 ```js
 var chord = require('tonal.chord')
 chord('CMaj7') // => ['C', 'E', 'G', 'B']
+var dom7 = chord.build('C E G Bb')
+dom7('A4') // => ['A4', 'C#5', 'E5', 'G5']
 ```
 
-This is part of [tonal]() and the foundation of the [tonal.chord] and [tonal.chord] dictionaries.
+`tonal.chord` is a collection of functions to create and manipulate chords and a [chord dictionary](https://github.com/danigb/tonal.chord/blob/master/lib/chords.json)
+
+
+This is part of [tonal](https://www.npmjs.com/package/tonal)
 
 ## Install
 
-Only via npm: `npm i --save tonal.chord`
+Currently, only via npm: `npm i --save tonal.chord`. Browser compatible dist file is planned.
 
 ## Usage
 
-In [tonal]() a chord is an array of notes ordered by pitch starting with a tonic.
+A chord is an array of notes ordered by pitch starting with a tonic. Sometimes it can be expressed with intervals.
 
 #### Get chord from chord name
 
-This is the simplest use case:
+You can get a chord by its tonic and name:
 
 ```js
 chord('Bb7') // => ['Bb', 'D', 'F', 'Ab']
 ```
 
-You can set the tonic as second parameter:
+Optionally, you can set the tonic as second parameter:
 
 ```js
 chord('7', 'Bb') // => ['Bb', 'D', 'F', 'Ab']
@@ -48,8 +52,8 @@ chord('7', false) // => ['1P', '3M', '5M', '7m']
 Finally, you can partially apply the function by specifying only the chord type:
 
 ```js
-var dom = chord('7')
-dom('Bb') // => ['Bb', 'D', 'F', 'Ab']
+var V7 = chord('7')
+V7('Bb') // => ['Bb', 'D', 'F', 'Ab']
 ```
 
 #### Build chords from intervals
@@ -92,7 +96,7 @@ maj7drop2('C4') // => [ 'G3', 'C4', 'E4', 'B4' ]
 
 #### More...
 
-Read the [generated documentation]() or get the [whole stuff]()
+Read the [generated documentation](https://github.com/danigb/tonal.chord/blob/master/API.md) or get the [whole stuff](https://www.npmjs.com/package/tonal)
 
 ## License
 
