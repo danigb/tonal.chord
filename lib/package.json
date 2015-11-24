@@ -1,0 +1,32 @@
+{
+  "name": "tonal.chord",
+  "version": "0.0.1",
+  "private": "true",
+  "description": "Music chords made easy",
+  "main": "index.js",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danigb/tonal.chord.git"
+  },
+  "keywords": [
+    "music",
+    "theory",
+    "chord",
+    "chords",
+    "dictionary",
+    "tonal"
+  ],
+  "author": "danigb",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/danigb/tonal.chord/issues"
+  },
+  "homepage": "https://github.com/danigb/tonal.chord#readme",
+  "dependencies": {
+    "tonal.dictionary": "file:../../dictionary/lib",
+    "tonal.gamut": "file:../../gamut/lib",
+    "tonal.transpose": "file:../../transpose"
+  }
+}

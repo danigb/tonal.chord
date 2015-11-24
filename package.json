@@ -1,0 +1,44 @@
+{
+  "name": "tonal.chord",
+  "version": "0.0.0",
+  "private": "true",
+  "description": "Music chords made easy",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "cp README.md lib/ && npm run docs && npm run dist && npm run disc && npm run coverage",
+    "test": "vows --spec test/*.js",
+    "docs": "documentation -f md > API.md",
+    "dist": "browserify lib/index.js | uglifyjs > dist/tonal.chord.min.js&& ls -hall dist/",
+    "disc": "browserify --full-paths lib/index.js | uglifyjs | discify > dist/disc.html",
+    "coverage": "istanbul cover vows test/*.js",
+    "cover": "npm run coverage && open ./coverage/lcov-report/index.html",
+    "climate": "npm run coverage && npm run codeclimate",
+    "codeclimate": "CODECLIMATE_REPO_TOKEN= codeclimate-test-reporter < coverage/lcov.info"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danigb/tonal.chord.git"
+  },
+  "keywords": [
+    "music",
+    "theory",
+    "chord",
+    "chords",
+    "dictionary",
+    "tonal"
+  ],
+  "author": "danigb",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/danigb/tonal.chord/issues"
+  },
+  "homepage": "https://github.com/danigb/tonal.chord#readme",
+  "devDependencies": {
+    "vows": "^0.8.x"
+  },
+  "dependencies": {
+    "tonal.dictionary": "file:../dictionary/lib",
+    "tonal.gamut": "file:../gamut/lib",
+    "tonal.transpose": "file:../transpose"
+  }
+}
