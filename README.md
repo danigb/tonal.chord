@@ -22,7 +22,7 @@ This is part of [tonal](https://www.npmjs.com/package/tonal)
 
 ## Install
 
-Currently, only via npm: `npm i --save tonal.chord`. Browser compatible dist file is planned.
+Via npm: `npm i --save tonal.chord` or add the [distribution file](https://raw.githubusercontent.com/danigb/tonal.chord/master/dist/tonal.chord.min.js) to your html page (will set `chord` global variable with the library)
 
 ## Usage
 
