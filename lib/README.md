@@ -16,8 +16,7 @@ var dom7 = chord.build('C E G Bb')
 dom7('A4') // => ['A4', 'C#5', 'E5', 'G5']
 ```
 
-`tonal.chord` is a collection of functions to create and manipulate chords and a [chord dictionary](https://github.com/danigb/tonal.chord/blob/master/lib/chords.json)
-
+`tonal.chord` is a [compact](https://rawgit.com/danigb/tonal.chord/master/dist/disc.html) library to create and manipulate chords, and a [chord dictionary](https://github.com/danigb/tonal.chord/blob/master/lib/chords.json)
 
 This is part of [tonal](https://www.npmjs.com/package/tonal)
 

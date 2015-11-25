@@ -1,7 +1,6 @@
 {
   "name": "tonal.chord",
   "version": "0.0.1",
-  "private": "true",
   "description": "Music chords made easy",
   "main": "index.js",
   "scripts": {
@@ -25,8 +24,8 @@
   },
   "homepage": "https://github.com/danigb/tonal.chord#readme",
   "dependencies": {
-    "tonal.dictionary": "file:../../dictionary/lib",
-    "tonal.gamut": "file:../../gamut/lib",
-    "tonal.transpose": "file:../../transpose"
+    "tonal.dictionary": "0.0.x",
+    "tonal.gamut": "0.0.x",
+    "tonal.transpose": "0.0.x"
   }
 }
