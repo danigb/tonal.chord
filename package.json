@@ -6,7 +6,7 @@
   "main": "lib/index.js",
   "scripts": {
     "build": "cp README.md lib/ && npm run docs && npm run coverage && npm run dist && npm run disc",
-    "test": "vows --spec test/*.js",
+    "test": "mocha",
     "docs": "documentation -f md > API.md",
     "dist": "browserify lib/index.js | uglifyjs > dist/tonal.chord.min.js&& ls -hall dist/",
     "disc": "browserify --full-paths lib/index.js | uglifyjs | discify > dist/disc.html",
@@ -38,8 +38,7 @@
     "html.js": "^0.12.1",
     "hyperscript": "^1.4.7",
     "soundfont-player": "^0.5.0",
-    "virtual-dom": "^2.1.1",
-    "vows": "^0.8.x"
+    "virtual-dom": "^2.1.1"
   },
   "dependencies": {
     "chord.dictionary": "0.0.x",

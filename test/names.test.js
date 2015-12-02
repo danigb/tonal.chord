@@ -1,10 +1,10 @@
-var vows = require('vows')
+/* global describe it */
 var assert = require('assert')
 var names = require('..').names
 
-vows.describe('chord.names').addBatch({
-  'names': function () {
+describe('chord.names', function () {
+  it('names', function () {
     assert(names().length > 100)
     assert(names(true).length > names().length)
-  }
-}).export(module)
+  })
+})
