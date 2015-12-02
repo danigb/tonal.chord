@@ -34,10 +34,15 @@
   },
   "homepage": "https://github.com/danigb/tonal.chord#readme",
   "devDependencies": {
+    "daccord": "^1.1.0",
+    "html.js": "^0.12.1",
+    "hyperscript": "^1.4.7",
+    "soundfont-player": "^0.5.0",
+    "virtual-dom": "^2.1.1",
     "vows": "^0.8.x"
   },
   "dependencies": {
-    "tonal.dictionary": "0.0.x",
+    "chord.dictionary": "0.0.x",
     "tonal.gamut": "0.0.x",
     "tonal.transpose": "0.0.x"
   }

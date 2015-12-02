@@ -25,8 +25,12 @@ vows.describe('music.chord.type').addBatch({
     assert.equal(type('B D F A'), 'dim')
     assert.equal(type('B D F Ab'), 'dim')
   },
+  'sus4': function () {
+    assert.equal(type('C F G'), 'sus4')
+  },
   'invalid chord types': function () {
     assert.equal(type(), null)
+    assert.equal(type('m n y'), null)
     assert.equal(type('C D E'), null)
   }
 }).export(module)

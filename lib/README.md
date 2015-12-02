@@ -22,13 +22,17 @@ This is part of [tonal](https://www.npmjs.com/package/tonal)
 
 ## Install
 
-Currently, only via npm: `npm i --save tonal.chord`. Browser compatible dist file is planned.
+Via npm: `npm i --save tonal.chord` or add the [distribution file](https://raw.githubusercontent.com/danigb/tonal.chord/master/dist/tonal.chord.min.js) to your html page (will set `chord` global variable with the library)
 
 ## Usage
 
-A chord is an array of notes ordered by pitch starting with a tonic. Sometimes it can be expressed with intervals.
+A chord is an array of notes ordered by pitch starting with a tonic. Sometimes it can be expressed with intervals. With `tonal.chord` you can:
 
-#### Get chord from chord name
+- `chord`: create chords by name (and optionally a tonic)
+- `build`: create chords from a list of notes
+- `type`: get the chord type (major, minor, diminished, augmented)
+
+#### Create a chord from name
 
 You can get a chord by its tonic and name:
 
@@ -96,6 +100,10 @@ maj7drop2('C4') // => [ 'G3', 'C4', 'E4', 'B4' ]
 #### More...
 
 Read the [generated documentation](https://github.com/danigb/tonal.chord/blob/master/API.md) or get the [whole stuff](https://www.npmjs.com/package/tonal)
+
+## Example
+
+To run the example `npm install -g beefy` then `beefy example/chords.js` and navigate to http://localhost:9966/
 
 ## License
 

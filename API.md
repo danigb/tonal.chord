@@ -1,39 +1,5 @@
 ## `chord`
 
-Get a chord by name using a dictionary.
-
-There is two ways to get a chord:
-
-- With type and tonic: `chord.chord('Maj7', 'C')`
-- With tonic included in name: `chord.chord('CMaj7')`
-
-To get chord intervals use  `false` as tonic
-
-This function can be partially applied (see examples)
-
-### Parameters
-
-* `name` **`String`** the chord name (optionally can include the tonic)
-
-
-### Examples
-
-```js
-var chord = require('music.chord')
-// with name and tonic
-chord('Maj7', 'C') // => ['C', 'D', 'E', 'F', 'G', 'A', 'B']
-// with tonic inside the name
-chord('C major') // => ['C', 'D', 'E', 'F', 'G', 'A', 'B']
-// partially applied
-var major = chord('major')
-major('C') // => ['C', 'D', 'E', 'F', 'G', 'A', 'B']
-```
-
-Returns `Object` a data object with the chord properties
-
-
-## `chord`
-
 In music.kit an chord is a list of notes or intervals ordered
 by pitch
 
@@ -81,24 +47,6 @@ maj79('A4') // => ['A4', 'C#5', 'E5', 'G#5', 'B5']
 Returns `Array` the chord notes (or intervals if null tonic)
 
 
-## `chord.dictionary`
-
-A chord dictionary
-
-### Parameters
-
-* `name` **`String`** the chord name
-
-
-### Examples
-
-```js
-var chords = require('music.chord/dictionary')
-chords('Maj7') // => { name: 'Maj7', intervals: ['1', '3', ...], aliases: [] }
-```
-
-
-
 ## `chord.names`
 
 Given a list of notes get the chord names
@@ -113,8 +61,7 @@ Given a list of notes get the chord names
 ```js
 var chord = require('music.chord')
 chord.names() // => ['Maj7', 'm7', ... ] (109 names)
-chord.names('D E F G A B C') [ 'D dorian' ]
-chord.names('D E F G A B C') [ 'D dorian' ]
+chord.names(true) // => [ ]
 ```
 
 Returns `Array` an array of chord names or all known chord names if no arguments provided
@@ -148,5 +95,14 @@ chord.type('C E G B7') // => '7'
 ```
 
 Returns `String` the chord type ('M', 'm', '7', 'dim', 'aug' or null)
+
+
+## `exports`
+
+Get chord dictionary data
+
+
+
+
 
 
