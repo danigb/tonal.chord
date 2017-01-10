@@ -7,6 +7,9 @@
 [![license](https://img.shields.io/npm/l/tonal.chord.svg)](https://www.npmjs.com/package/tonal.chord)
 [![tonal](https://img.shields.io/badge/lib-tonal-yellow.svg)](https://www.npmjs.com/package/tonal)
 
+
+## DEPRECATED: All code moved to tonal: https://github.com/danigb/tonal/tree/master/packages/chord
+
 Music chords made easy:
 
 ```js
